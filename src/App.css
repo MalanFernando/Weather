@@ -3,6 +3,7 @@
   height: 100vh;
   background-color: #4e6566f1;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -105,7 +106,20 @@
 .clime button>i{
   font-size: 1.5rem;
 }
-@media screen and (max-width: 767px) {
+
+.icon-git{
+  position: absolute;
+  top: 0;
+  color: #1b292e;
+  font-size: 1.7rem;
+  margin: 1rem;
+  transition: 200ms linear;
+}
+.icon-git:hover{
+  color: #0e191d;
+}
+
+@media screen and (max-width: 600px) {
   .wheather{
     flex-direction: column;
   }
