@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
 }
-.spinner{
+/* .spinner{
   position: absolute;
   top: 0;
   z-index: 20;
@@ -29,7 +29,7 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 
 .wheather{

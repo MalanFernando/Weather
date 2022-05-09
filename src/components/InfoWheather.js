@@ -2,7 +2,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Clock from "./Clock";
 
-
 const InfoWheather = () => {
 
     const [cord, setCord] = useState({});
