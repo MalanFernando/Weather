@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import InfoWheather from './components/InfoWheather';
+import Spinner from './components/Spinner';
 
 function App() {
+
+  const [load, setLoad] = useState(true);
+    setTimeout(()=>{
+      setLoad(false)
+    },3000);
+
+  if (load) {
+    return(
+      <Spinner/>
+    )
+  }else{
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <InfoWheather/>
     </div>
   );
 }
-
+}
 export default App;

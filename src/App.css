@@ -1,38 +1,112 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100%;
+  height: 100vh;
+  background-color: #4e6566f1;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
+.spinner{
+  position: absolute;
+  top: 0;
+  z-index: 20;
+  background-color: #374049ea;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-@keyframes App-logo-spin {
+.spinner>i{
+  font-size: 3rem;
+  color: #e0e0e0;
+  animation: spin infinite 8s linear;
+}
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+.wheather{
+  display: flex;
+  margin: 1rem;
+  border-radius: 4px;
+  box-shadow: 0px 4px 20px -12px #161616;
+  overflow: hidden;
+}
+.date{
+  display: flex;
+  align-items: center;
+  background-color: #E8F9FD;
+  padding: 1rem 2rem;
+}
+.date h2{
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1rem;
+}
+.date .hour-info{
+  font-size: 1rem;
+}
+.date p{
+  font-weight: 500;
+}
+
+.clime{
+  background: linear-gradient(
+    to right,
+    #1b1b1b98,
+    #1b1b1b98
+   ), url(https://source.unsplash.com/g30P1zcOzXo);
+  background-size: cover;
+  padding: 1rem 5rem 1rem 2rem;
+  width: 150px;
+  position: relative;
+  color: #E8F9FD;
+}
+.clime p, h3{
+  line-height: .8rem;
+}
+.clime .temp{
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.clime .icon-temp{
+  font-size: 1.2rem;
+}
+.clime>img{
+  width: 100px;
+  margin: -10px;
+  position: relative;
+} 
+.clime>button{
+  background-color: #E8F9FD;
+  color: #545c64;
+  border-radius: 8px 0 0 8px;
+  box-shadow: 0px -2px 30px -12px #161616;
+  border: none;
+  margin: 1rem 0;
+  padding: .6rem 1rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  transition: 200ms linear;
+}
+.clime>button:hover{
+  color: #13191b;
+}
+.clime button>i{
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 767px) {
+  .wheather{
+    flex-direction: column;
   }
 }
