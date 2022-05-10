@@ -14,7 +14,7 @@ const InfoWheather = () => {
         function success(pos) {
             var crd = pos.coords;
             
-            axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${crd.latitude}&lon=${crd.longitude}&appid=333004b592194ff613ffd19741d788f6&lang={es}&units=metric`)
+            axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${crd.latitude}&lon=${crd.longitude}&appid=333004b592194ff613ffd19741d788f6&units=metric`)
             .then(res => {
                 setCord(res.data);
                 setTempe(res.data.main.temp);
