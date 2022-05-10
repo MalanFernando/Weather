@@ -1,17 +1,23 @@
+:root{
+  --white: #f8f7f1;
+  --background: #4c6d75;
+  --backgroundLoad: #222831f8;
+}
 .App {
   width: 100%;
   height: 100vh;
-  background-color: #4e6566f1;
+  background-color: var(--background);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-/* .spinner{
+.spinner{
   position: absolute;
   top: 0;
+  left: 0;
   z-index: 20;
-  background-color: #374049ea;
+  background-color: var(--backgroundLoad);
   width: 100%;
   height: 100vh;
   display: flex;
@@ -30,20 +36,19 @@
   to {
     transform: rotate(360deg);
   }
-} */
-
+}
 
 .wheather{
   display: flex;
   margin: 1rem;
   border-radius: 4px;
-  box-shadow: 0px 4px 20px -12px #161616;
+  box-shadow: 0px 4px 20px -12px #080808;
   overflow: hidden;
 }
 .date{
   display: flex;
   align-items: center;
-  background-color: #E8F9FD;
+  background-color: var(--white);
   padding: 1rem 2rem;
 }
 .date h2{
@@ -60,37 +65,40 @@
 }
 
 .clime{
-  background: linear-gradient(
+  background: 
+  linear-gradient(
     to right,
-    #1b1b1b98,
-    #1b1b1b98
-   ), url(https://source.unsplash.com/g30P1zcOzXo);
+    #4747474b,
+    #2c2c2c7e
+   ), 
+   url(https://source.unsplash.com/g30P1zcOzXo);
   background-size: cover;
   padding: 1rem 5rem 1rem 2rem;
-  width: 150px;
+  width: 170px;
   position: relative;
-  color: #E8F9FD;
+  color: var(--white);
 }
 .clime p, h3{
   line-height: .8rem;
+  font-weight: 500;
 }
 .clime .temp{
   font-weight: 500;
   font-size: 1.5rem;
 }
 .clime .icon-temp{
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .clime>img{
-  width: 100px;
+  width: 90px;
   margin: -10px;
   position: relative;
 } 
 .clime>button{
-  background-color: #E8F9FD;
-  color: #545c64;
-  border-radius: 8px 0 0 8px;
-  box-shadow: 0px -2px 30px -12px #161616;
+  background-color: var(--white);
+  color: #4c5258;
+  border-radius: 4px 0 0 4px;
+  box-shadow: 0px 2px 30px -12px #eeeeee;
   border: none;
   margin: 1rem 0;
   padding: .6rem 1rem;
@@ -104,12 +112,12 @@
   color: #13191b;
 }
 .clime button>i{
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .icon-git{
   position: absolute;
-  top: 0;
+  top: 10%;
   color: #1b292e;
   font-size: 1.7rem;
   margin: 1rem;
